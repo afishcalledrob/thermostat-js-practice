@@ -2,12 +2,18 @@
 <html>
 <head>
   <title>THERMOSTAT</title>
+  <script src='node_modules/jquery/dist/jquery.min.js'></script>
   <script src='lib/thermostat.js'></script>
+  <script src='lib/interface.js'></script>
+  <link href='./public/css/style.css' rel="stylesheet" type="text/css">
 </head>
 <body>
+
   <p> Temperature Control </p>
   <input type='range' min='10' max='32' value='20' class='slider'>
   <p> Current Temperature </p>
+  <p class='temperature-display'></p>
+  <p class="error_message"> </p>
   <fieldset>
   <legend>Power Saver</legend>
   <div>
@@ -18,7 +24,7 @@
     <input type="radio" id="PowerSaverOff" name="Power Saver" value="Off">
     <label for="PowerSaverOff">Off</label>
   </div>
-</fieldset>
+<fieldset>
   <div>
     <input type="button" id="Reset" value="Reset">
   </div>
